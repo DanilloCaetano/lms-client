@@ -1,0 +1,11 @@
+.linkShowMore {
+  margin-top: 140px;
+  display: flex;
+  justify-content: center;
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

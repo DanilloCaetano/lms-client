@@ -1,0 +1,25 @@
+@import 'styles/base';
+
+.panelWrapper {
+  margin-left: -170px;
+  margin-right: -170px;
+  margin-top: -100px;
+}
+
+.content {
+  margin-top: 70px;
+
+  .accordionIcon {
+    width: 42px;
+    height: 42px;
+    border-radius: 20px;
+    background-color: $darkness-gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .classItem {
+    padding: 0px 42px
+  }
+}

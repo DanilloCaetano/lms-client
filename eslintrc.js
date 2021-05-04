@@ -1,0 +1,55 @@
+module.exports = {
+  extends: [
+    'airbnb-typescript',
+    'airbnb/hooks',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jest/recommended',
+    'plugin:prettier/recommended',
+  ],
+  plugins: ['react', '@typescript-eslint', 'jest'],
+  env: {
+    browser: true,
+    es6: true,
+    jest: true,
+  },
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2018,
+    sourceType: 'module',
+    project: './tsconfig.json',
+  },
+  rules: {
+    'linebreak-style': 'off',
+    'no-anonymous-default-export': 'off',
+    'operator-linebreak': 'off',
+    'consistent-return': 'off',
+    'arrow-parens': [2, 'as-needed'],
+    'max-len': [2],
+    'react/prop-types': 'off',
+    'react/forbid-prop-types': 'off',
+    'react/jsx-curly-newline': 'off',
+    'no-underscore-dangle': 'off',
+    'object-curly-newline': 'off',
+    'no-explicit-any': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'no-confusing-arrow': 'off',
+    'function-paren-newline': 'off',
+    'comma-dangle': 'off',
+    'no-throw-literal': 'off',
+    camelcase: 'off',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
+  },
+};

@@ -1,0 +1,13 @@
+@import 'colors';
+@import 'dimensions';
+
+$default-shadow: 0 1px 4px $dark-gray-21p;
+$left-nav-shadow: 0 $header-desktop-height 4px $dark-gray-21p; //Same as default shadow with vertical offset to account for header
+$invisible-shadow: 0 4px 6px 0 $abbey-10p;
+$nav-shadow: 0 1px 1px 0 $black-7p, 0 2px 5px 0 $abbey-10p;
+$card-shadow: 0 4px 6px 0 $abbey-10p;
+
+@mixin horizontal-bar-shadow() {
+  box-shadow: 0 1px 4px 0 rgba(34, 33, 33, .21);
+  clip-path: inset(0 0 -4px 0); // Use clip-path so that box-shadow is only visible at the bottom
+}

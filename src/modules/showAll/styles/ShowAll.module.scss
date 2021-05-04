@@ -1,0 +1,39 @@
+@import 'styles/base';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content max-content max-content max-content;
+  grid-gap: 72px; 
+}
+
+@include media-breakpoint-down(mobile) { 
+  .wrapper {
+    display: grid;
+    grid-template-columns: max-content;
+    grid-gap: 72px; 
+  }
+}
+
+@media (max-width: 1450px) and (min-width: 990px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 72px; 
+  }
+}
+
+@media (max-width: 1599px) and (min-width: 1450px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    grid-gap: 72px; 
+  }
+}
+
+@media (max-width: 2100px) and (min-width: 1600px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content;
+    grid-gap: 72px; 
+  }
+}

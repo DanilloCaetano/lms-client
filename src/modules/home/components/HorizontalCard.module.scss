@@ -1,0 +1,109 @@
+@import 'styles/base';
+.HCardWrapper {
+    min-height: 276px;
+    max-height: 500px;    
+    border: none;
+    display: flex;  
+    margin-bottom: 65px;  
+}
+
+.HCardContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: baseline; 
+    width: 100%;
+
+    h5 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: -5px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+      }
+      
+    .description {        
+      color: $secondary;
+      max-width: 100%;
+      max-height: 220px;
+      text-align: justify;       
+      letter-spacing: .5px;
+      margin-bottom: 36px;
+      margin-right: 65px;
+    }
+
+    .accessDescription {
+      color: $secondary;
+      margin: 10px 0px 20px 0px
+    }
+
+    .button {
+      margin-bottom: 27px;
+      margin-right: 65px;
+    }
+}
+
+.HCardFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+        font-size: 16px;
+        letter-spacing: .25px;
+    }
+}
+
+.HCardImage {
+    width: 377px !important;
+    margin-right: 63px;
+}
+
+
+@include media-breakpoint-down(tablet) {
+    .HCardWrapper {
+        height: fit-content;
+        width: 100%;
+        max-height: 100%;
+        align-items: center;        
+    }
+
+    .HCardImage {
+        width: 100% !important;
+        margin: 10px;
+    }
+
+    .HCardContent {
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px !important;
+
+        .description {
+            font-size: 16px;
+            max-height: 330px;
+            max-width: 100%;
+            line-height: 30px;
+            padding-right: 15px;
+            margin-right: 0px;
+        }
+
+        .button {
+          margin-bottom: 27px;
+          margin-right: 0px;
+        }
+    }
+
+    .HCardFooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 10px;
+
+        p {
+            font-size: 16px;
+            letter-spacing: .25px;
+        }
+    }
+}

@@ -1,0 +1,107 @@
+@import 'styles/base';
+
+.container {
+  box-sizing: border-box;
+  display: flex;
+  position: fixed;
+  top: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1300; // navbar drawer has z-index of 1200
+  box-shadow: $default-shadow;
+  padding: 15px 25px;
+  background: $dark-gray-linear;
+  width: 100%;
+
+  :nth-child(3) {
+    margin-left: auto;
+  }
+
+  .logo {
+    height: 46px;
+    vertical-align: middle;
+  }
+
+  .loading {
+    padding: 0;
+  }
+
+  .navButton {
+    margin: 0 13px 0 -13px;
+
+    .hamburger {
+      opacity: 0.5;
+      width: 23px;
+      height: 20px;
+    }
+  }
+
+  .avatar {
+    margin-left: 25px;
+  }
+}
+
+.searchBar {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.searchInput {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  width: 630px;
+  height: 40px;
+  border-radius: 100px;
+  padding: 0px 25px;
+}
+
+@include media-breakpoint-up(desktop) {
+  .container {
+    height: $header-desktop-height;
+  }
+}
+
+@include media-breakpoint-down(tablet) {
+  .container {
+    transition: $navbar-transition;
+    z-index: 100;
+    padding: 10px 15px;
+    height: $header-tablet-height;
+
+    :nth-child(3) {
+      margin-left: 0;
+    }
+
+    .navButton {
+      margin-right: 0;
+
+      .hamburger {
+        width: 21px;
+        height: 19px;
+      }
+    }
+
+    .logo {
+      height: 36px;
+      vertical-align: middle;
+    }
+
+    .avatar {
+      display: none;
+      visibility: hidden;
+    }
+
+    .store {
+      width: 25px;
+      height: 20px;
+    }
+
+    &.navOpen {
+      margin-left: $navbar-width;
+      overflow-x: hidden;
+    }
+  }
+}

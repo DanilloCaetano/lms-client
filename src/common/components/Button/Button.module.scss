@@ -1,0 +1,59 @@
+@import 'styles/base';
+
+$spinner-width: 24px;
+
+.root {
+  position: relative;
+}
+
+// We specifically want to only target links here
+// stylelint-disable selector-no-qualifying-type
+a {
+  &.root {
+    color: $white;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    // This should remove the external link icon from buttons entirely.
+    &[target='_blank'] {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &.default {
+    color: $blue-purple;
+  }
+
+  &.text {
+    color: $white;
+  }
+}
+// stylelint-enable selector-no-qualifying-type
+
+.icon {
+  display: none;
+  position: absolute;
+  left: 50%;
+  margin-left: -($spinner-width / 2);
+  font-size: $spinner-width;
+}
+
+.loading {
+  pointer-events: none;
+
+  .text {
+    visibility: hidden;
+  }
+
+  .icon {
+    display: block;
+  }
+}
+
+.link {
+  font-family: inherit;
+}

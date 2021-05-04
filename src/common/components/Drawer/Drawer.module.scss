@@ -1,0 +1,48 @@
+@import 'styles/base';
+
+.drawer {
+  .paper {
+    width: 45%;
+    overflow-y: visible;
+  }
+
+  .large {
+    width: 60%;
+  }
+
+  .container {
+    background-color: $extra-light-gray;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .backdrop {
+    background: $dark-gray-80p;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 25px;
+    left: -65px;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    min-width: 0;
+    min-height: 0;
+    color: $white;
+    font-size: 40px;
+  }
+
+  @include media-breakpoint-down(tablet) {
+    .paper {
+      width: 90%;
+    }
+  }
+
+  @include media-breakpoint-down(mobile) {
+    .paper {
+      width: 100%;
+    }
+  }
+}

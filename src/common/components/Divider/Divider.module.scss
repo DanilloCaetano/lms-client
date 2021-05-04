@@ -1,0 +1,19 @@
+
+@import 'styles/base';
+.divider {
+    margin: 50px 0px 30px 0px;
+    border-width: 1px;
+    border-top-style: initial;
+    border-right-style: initial;
+    border-bottom-style: solid;
+    border-left-style: initial;
+    border-color: $black-12p;
+    border-image: initial;
+}
+
+@include media-breakpoint-down(tablet) {
+    .divider {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}

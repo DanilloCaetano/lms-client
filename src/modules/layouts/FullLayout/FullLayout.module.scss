@@ -1,0 +1,50 @@
+@import 'styles/base';
+
+.container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.body {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 0 auto;
+  margin: 0;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: $header-desktop-height;
+    padding: 100px 170px;
+    min-width: 0;
+  }
+}
+
+@include media-breakpoint-down(tablet) {
+  .container {
+    .content {
+      margin-top: $header-tablet-height;
+      margin-left: 10px;
+      padding-left: 10px;
+      padding-right: 5px;
+      padding-top: 10px;
+    }
+
+    &.navOpen {
+      //When nav is open on small screens,  push content off screen instead of squishing it
+      position: fixed;
+      overflow-x: hidden;
+
+      .content {
+        width: 100vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import 'styles/base';
+
+$transition-time: 500ms;
+
+.backIcon {
+  margin-right: 13px;
+  min-width: 15px;
+}
+
+.backButton {
+  font-weight: $font-weight-semibold;
+}
+
+.menuList {
+  width: 100%;
+}
+
+.listItemLink {
+  display: flex;
+  flex: 1;
+
+  .listItemLinkText {
+    padding-right: 20px;
+
+    sup {
+      font-size: 10px;
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: $white;
+
+    &::after {
+      @include target-ie {
+        @include background-svg(
+          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#d3d3d3" d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path></svg>'
+        );
+
+        background-color: transparent;
+      }
+
+      position: absolute;
+      top: calc(50% - 5px);
+      right: 20px;
+      margin: 0;
+      background-color: $cool-gray;
+    }
+  }
+}
+
+.menuListItem {
+  @include media-breakpoint-down(tablet) {
+    padding-left: 45px;
+  }
+}
+
+.menuListItemWrapper,
+.menuListItem {
+  height: 60px;
+
+  + .menuListItem {
+    border-top: 1px solid $cool-gray;
+  }
+
+  + .menuListItemWrapper {
+    padding: 0;
+  }
+}
+
+.menuListItemIcon {
+  padding-left: 16px;
+
+  @include media-breakpoint-down(tablet) {
+    border-bottom: unset;
+  }
+}
+
+.dropdown {
+  transition: height $transition-time ease;
+}
+
+.menuPrimary {
+  .enter {
+    position: absolute;
+    transform: translateX(-110%);
+  }
+
+  .enterActive {
+    transform: translateX(0%);
+    transition: all $transition-time ease;
+  }
+
+  .exit {
+    position: absolute;
+  }
+
+  .exitActive {
+    transform: translateX(-110%);
+    transition: all $transition-time ease;
+  }
+}
+
+.menuSecondary {
+  .enter {
+    transform: translateX(110%);
+  }
+
+  .enterActive {
+    transform: translateX(0%);
+    transition: all $transition-time ease;
+  }
+
+  .exitActive {
+    transform: translateX(110%);
+    transition: all $transition-time ease;
+  }
+}

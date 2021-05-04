@@ -1,0 +1,19 @@
+// Font weights downloaded with Open Sans
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$card-font-size: 14px;
+$card-font-size-small: 11px;
+
+// String constants
+$percent: '%';
+$empty: '';
+$colon: ':';
+$en-dash: '\002013';
+
+// Mixins
+@mixin form-heading() {
+  font-size: 14px;
+  font-weight: $font-weight-semibold;
+}

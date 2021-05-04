@@ -1,0 +1,61 @@
+// Variables
+$grid-breakpoints: (
+  xs: 0,
+  mobile: 576px,
+  tablet: 768px,
+  desktop: 992px,
+  xl: 1200px,
+);
+
+$layout-padding-horizontal-desktop: 60px;
+$layout-padding-horizontal-tablet: 42px;
+$layout-padding-horizontal-mobile: 15px;
+$navbar-width: 280px;
+
+$header-desktop-height: 80px;
+$header-tablet-height: 58px;
+
+$footer-height: 45px;
+
+$card-margin: 10px 0;
+$card-padding-vertical: 15px;
+$card-padding-horizontal: 24px;
+$card-padding: $card-padding-vertical $card-padding-horizontal;
+$card-padding-mobile: 21px;
+$card-line-height: 19px;
+
+$modal-padding-desktop-vertical: 20px;
+$modal-padding-desktop-horizontal: 24px;
+$modal-padding-tablet-vertical: 20px;
+$modal-padding-tablet-horizontal: 40px;
+$modal-padding-mobile-vertical: 4px;
+$modal-padding-mobile-horizontal: 15px;
+
+// Mixins
+@mixin container-wide() {
+  padding: 30px 60px;
+
+  @include media-breakpoint-down(tablet) {
+    padding: 5px 20px;
+  }
+
+  @include media-breakpoint-down(mobile) {
+    padding: 5px 10px;
+  }
+}
+
+@mixin container-narrow($top: 30px, $bottom: 30px, $right: 180px) {
+  padding: $top $right $bottom 180px;
+
+  @include media-breakpoint-down(desktop) {
+    padding: $top 20px $bottom;
+  }
+
+  @include media-breakpoint-down(tablet) {
+    padding: 0 20px $bottom;
+  }
+
+  @include media-breakpoint-down(mobile) {
+    padding: 0 10px $bottom;
+  }
+}

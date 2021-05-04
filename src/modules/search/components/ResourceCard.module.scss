@@ -1,0 +1,37 @@
+@import 'styles/base';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .titleWrapper {
+    margin-bottom: 34px;
+  }
+
+  .titleResourceWrapper {
+    margin-bottom: 24px;
+    .icon {
+      margin-right: 19px;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.classViewed {
+  color: $light-gray !important;
+
+  a {
+    color: $light-gray !important;
+  }
+}
+
+.classNotViewed {
+  color: white !important;
+
+  a {
+    color: white !important;
+  }
+}

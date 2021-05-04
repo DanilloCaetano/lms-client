@@ -1,0 +1,71 @@
+$extra-light-gray: #f9f9f9;
+$cool-gray: #e0e0e0;
+$deep-cool-gray: #b4b4b4;
+$dark-gray: #121212;
+$darkness-gray: #1e1e1e;
+$darkness-semi-gray: #1e1e1e;
+
+$red: #d6083b;
+$light-red: #E4372C;
+$light-pink: #E06765;
+
+$orange: #e55302;
+$orange-compliant: #d73e0f;
+
+$yellow: #ffc82e;
+
+$green: #4e9d2d;
+$deep-green: #35771f;
+
+$light-blue-10: #f5f8fa;
+$blue-purple: #005de8;
+$deep-blue-purple: #082ecf;
+
+$primary: #fff;
+$secondary: rgba(255, 255, 255, 0.7);
+
+// Other Colors
+// Use names primarily from http://chir.ag/projects/name-that-color/
+// and in case of name conflict, use secondarily https://www.color-blindness.com/color-name-hue/
+
+//solid colors
+
+$white: #fff;
+$gallery: #ededed;
+$dove-gray: #727272;
+$light-gray: rgba(255, 255, 255, 0.6);;
+$abbey: #4c5153;
+$black: #000;
+
+$linen: #fcf0ec;
+
+$mystic: #e2eaef;
+$polar: #e5f4fa;
+
+// transparent colors
+$abbey-10p: rgba($abbey, 0.1);
+$dark-gray-21p: rgba($dark-gray, 0.21);
+$dark-gray-80p: rgba($dark-gray, 0.8);
+$dark-gray-70p: rgba($dark-gray, 0.7);
+$dark-gray-90p: rgba($dark-gray, 0.9);
+$black-4p: rgba($black, 0.04);
+$black-38p: rgba(255, 255, 255, 0.38);
+$black-8p: rgba(255, 255, 255, 0.08);
+$black-12p: rgba(255, 255, 255, 0.12);
+$black-7p: rgba($black, 0.07);
+$black-24p: rgba($black, 0.24);
+$black-87p: rgba(0, 0, 0, 0.87);
+
+
+$dark-gray-linear: linear-gradient(0deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.07)),
+  $dark-gray;
+
+$dark-gray-solid-linear:  linear-gradient(0deg, $dark-gray-linear, $dark-gray-linear), $dark-gray;
+$dark-gray-linear-left: linear-gradient(to left, $dark-gray-70p, rgba($dark-gray, 0));
+$dark-gray-linear-right: linear-gradient(to right, $dark-gray-70p, rgba($dark-gray, 0));
+
+$red-10p: rgba($red, 0.1);
+
+$yellow-10p: rgba($yellow, 0.1);
+
+$green-10p: rgba($green, 0.1);

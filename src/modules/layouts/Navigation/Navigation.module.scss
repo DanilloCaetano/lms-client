@@ -1,0 +1,247 @@
+@import 'styles/base';
+
+$default-padding: 15px 0;
+
+.item {
+  box-sizing: border-box;
+  display: flex;
+  padding: $default-padding;
+  height: 45px;
+  text-decoration: none;
+
+  &[target='_blank'] {
+    &::after {
+      background: none;
+      background-image: none;
+    }
+  }
+
+  .label {
+    line-height: 19px;
+    letter-spacing: 0;
+    font-size: 14px;
+  }
+
+  &.active {
+    font-weight: $font-weight-semibold;
+  }
+
+  .icon {
+    margin: 0 25px;
+    width: 20px;
+    font-size: 20px;
+  }
+
+  .imageIcon {
+    min-width: 36px;
+  }
+}
+
+.container {
+  flex-shrink: 0;
+  white-space: nowrap;
+
+  .open,
+  &.open {
+    transition: $navbar-transition;
+    width: $navbar-width;
+
+    .anchorLeft {
+      // Remove border added by material ui and add box shadow instead
+      border-right: 0;
+      box-shadow: $left-nav-shadow;
+    }
+
+    .icon {
+      @include media-breakpoint-down(tablet) {
+        margin: 0 30px 0 25px;
+      }
+    }
+  }
+
+  .item {
+    box-sizing: border-box;
+    display: flex;
+    padding: 15px 0;
+    height: 52px;
+    text-decoration: none;
+
+    .label {
+      line-height: 19px;
+      letter-spacing: 0;
+      font-size: 14px;
+    }
+
+    .icon {
+      transition: $navbar-transition;
+      margin: 0 25px;
+      width: 20px;
+      font-size: 20px;
+    }
+
+    &.active {
+      font-weight: $font-weight-semibold;
+    }
+
+    .imageIcon {
+      min-width: 36px;
+    }
+
+    @include media-breakpoint-down(tablet) {
+      padding: 12px 0;
+      height: 45px;
+    }
+  }
+
+  .closed,
+  &.closed {
+    transition: $navbar-transition;
+    width: 70px;
+    overflow-x: hidden;
+  }
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: $header-desktop-height;
+
+  .navHeader {
+    display: none;
+    height: $header-desktop-height;
+  }
+
+  .divider {
+    display: none;
+  }
+}
+
+.navList {
+  margin: 15px 0 0;
+  padding: 0;
+  list-style-type: none;
+
+  .divider {
+    margin: 11px 0;
+    border-bottom: 1px solid $gallery;
+  }
+
+  @include media-breakpoint-down(tablet) {
+    margin: 11px 0;
+  }
+}
+
+.navLogout {
+  display: none;
+  height: $header-desktop-height;
+
+  .logoutBtn {
+    border-radius: 30px;
+    width: 70%;
+  }
+}
+
+@include media-breakpoint-up(desktop) {
+  .navList {
+    // Need to use padding for IE11 bug with scrolling
+    padding-bottom: ($footer-height + 11);
+  }
+}
+
+.browseCatalog {
+  display: none;
+}
+
+@include media-breakpoint-down(tablet) {
+  .browseCatalog {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-bottom: 5px;
+    border-top: 1px solid $gallery;
+    border-bottom: 1px solid $gallery;
+    cursor: pointer;
+    padding: 20px 0;
+    list-style-type: none;
+
+    .label {
+      font-size: 14px;
+    }
+
+    .icon {
+      margin: 0 25px;
+      width: 20px;
+      font-size: 20px;
+    }
+
+    .angleIcon {
+      position: absolute;
+      right: 0;
+      margin: 0 25px;
+      font-size: 20px;
+    }
+  }
+}
+
+.dialogRoot {
+  background-color: $white;
+
+  @include media-breakpoint-up(desktop) {
+    display: none;
+  }
+}
+
+.dialogHeader {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 14px;
+
+  p {
+    margin-left: 6px;
+  }
+}
+
+@include media-breakpoint-down(tablet) {
+  .container {
+    .open,
+    &.open {
+      .anchorLeft {
+        box-shadow: $default-shadow;
+      }
+    }
+
+    .closed,
+    &.closed {
+      width: 0; // Hide on table/mobile but don't display none so transitions work
+    }
+
+    .toolbar {
+      min-height: $header-tablet-height;
+
+      .navHeader {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        border-bottom: 1px solid $gallery;
+        min-width: 100%;
+        height: $header-tablet-height;
+      }
+
+      .avatar {
+        margin: 0 20px;
+      }
+
+      .divider {
+        display: block;
+      }
+    }
+
+    .navLogout {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

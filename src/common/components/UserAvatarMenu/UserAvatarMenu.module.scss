@@ -1,0 +1,84 @@
+@import 'styles/base';
+
+.profileContainer {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  width: 70px;
+}
+
+.arrowDown {
+  opacity: 0.5;
+  margin-left: 5px;
+  width: 22px;
+  height: 12px;
+  vertical-align: middle;
+}
+
+.dropdown {
+  display: flex;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  flex-direction: column;
+  z-index: 101;
+  border-radius: 3px;
+  box-shadow: $default-shadow;
+  background: $dark-gray-linear;
+  padding: 10px 0;
+  min-width: 250px;
+  line-height: 15px;
+}
+
+.itemIcon {
+  opacity: 0.6;
+  margin-right: 15px;
+}
+
+.divider {
+  margin: 10px 0;
+  border-bottom: 1px solid $cool-gray;
+}
+
+.navLink {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  transition: $button-transition;
+  margin-left: 0;
+  padding: 5px 20px;
+  width: 100%;
+  text-decoration: none;
+  line-height: 1.75;
+  color: $white;
+  font-size: $card-font-size;
+
+  &:hover {
+    background-color: $black-8p;
+    text-decoration: none;
+  }
+
+  &[target='_blank'] {
+    &::after {
+      background: none;
+      background-image: none;
+    }
+  }
+
+  .label {
+    line-height: 19px;
+    letter-spacing: 0;
+    font-size: 14px;
+  }
+
+  .itemIcon {
+    width: $card-font-size;
+    font-size: $card-font-size;
+  }
+}

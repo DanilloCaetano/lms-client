@@ -1,0 +1,46 @@
+@import 'styles/base';
+
+.menuWrapper {
+  background-color: $dark-gray-70p;
+  
+  .menuBody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 78px; 
+    margin-top: 225px;    
+  }
+  
+  .menuContainer {
+    display: flex;
+    border-bottom: 1px solid $black-38p;
+    padding: 0px 5px;
+  }
+
+  .menuItem {
+    margin-top: 31px;
+    padding-bottom: 7px;
+    cursor: pointer;
+    h5 {
+      color: $black-38p !important;
+    }
+  }
+  .menuItemActive {
+    margin-top: 31px;
+    padding-bottom: 7px;
+    cursor: pointer;    
+    border-bottom: 3px solid $light-pink;
+
+    h5 {
+      color: $light-pink !important;
+    }
+  }
+  
+  .menuItem:not(:last-child) {
+    margin-right: 98px;
+  }
+  .menuItemActive:not(:last-child) {
+    margin-right: 98px;
+  }
+}

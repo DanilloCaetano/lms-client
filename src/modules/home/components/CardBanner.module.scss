@@ -1,0 +1,46 @@
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo {
+  margin-top: 480px;
+  display: flex;
+  align-self: center;
+}
+
+.logoMin {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  img {
+    width: 18px;
+    height: 30px;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 16px;
+  }
+}
+
+.title {
+  margin: 29px 9px 35px 9px;
+  text-align: center;
+}
+
+.titleMin {
+  margin: 105px 20px 20px 20px;
+  text-align: left;
+  min-height: 64px;
+  display: flex;
+  align-items: flex-end;
+  width: 296px;
+}

@@ -1,0 +1,47 @@
+// stylelint-disable selector-no-qualifying-type
+@import 'styles/base';
+
+.container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 1300; // navbar drawer has z-index of 1200
+  background: $black;
+  padding: 13px 30px;
+  height: $footer-height;
+}
+
+.loading {
+  background: $dark-gray;
+}
+
+.item {
+  line-height: 18px;
+  letter-spacing: 0;
+  color: $white;
+  font-size: 13px;
+
+  a {
+    color: $white;
+
+    // hide external link indicator
+    &[target='_blank'] {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(tablet) {
+  .container {
+    transition: $navbar-transition;
+    z-index: 100;
+
+    &.navOpen {
+      margin-left: $navbar-width;
+    }
+  }
+}

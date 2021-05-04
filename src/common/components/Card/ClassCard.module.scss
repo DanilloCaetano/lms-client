@@ -1,0 +1,102 @@
+@import 'styles/base';
+
+.wrapperContent {
+  display: flex;
+  margin-top: 40px;  
+
+  .img {
+    margin-right: 50px;
+    cursor: pointer;
+
+    &:hover {
+      .hoverVideoWrapper {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(7, 7, 7, 0.8) 100%);
+        display: flex;      
+        transition: .5s;
+      }
+
+      .checkVideoWrapper {
+        display: none;
+      }
+    }
+  }
+
+  .icons {
+    display: flex;
+    margin-top: 40px;
+  }  
+}
+
+h4 {
+  color: $light-gray;
+}
+
+.hoverVideoWrapper {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+
+  .progress {
+    position: absolute;
+    margin-top: 60px;
+  }
+
+  .iconPlay {
+    font-size: 34px;
+  }
+  
+  .videoTime {
+    font-size: 12px;
+    height: 17px;
+    width: 49px;
+    background: rgba(0, 0, 0, 0.38);
+    border-radius: 8px;
+    text-align: center;
+    margin: -50px 8px 0px 96px;
+    position: absolute;
+  }
+}
+
+.checkVideoWrapper {
+  display: flex;
+  justify-content: flex-end;
+  
+  .iconCheck {
+    font-size: 18px;
+    position: absolute;
+    margin-top: 110px;
+    margin-left: -6px;
+  }
+}
+
+.classViewed {
+  color: $light-gray !important;
+
+  a {
+    color: $light-gray !important;
+  }
+}
+
+.classNotViewed {
+  color: white !important;
+
+  a {
+    color: white !important;
+  }
+}
+
+@include media-breakpoint-down(tablet) { 
+  .wrapperContent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;  
+  }
+
+  .img {
+    margin-right: 0px !important;
+    align-self: center;
+    margin-bottom: 30px;
+  }
+}
